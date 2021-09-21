@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Contact me page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VFyqQqJ4O18" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <form name="feedback">
+        <fieldset>
+            <legend>Your contact info</legend>
+        Enter First Name<input type="text" placeholder="anonymous" name="fname" required>
+        Enter Last Name<input type="text" placeholder="anonymous" name="lname" required>
+        Enter Email Address<input type="email" placeholder="name@domain.com" name="mail">
+    </fieldset>
+        Do you recommend this website<br>
+        <input type="radio" name="recommendation" value="yes" id="yes" checked> <label for="yes">Yes</label> <br>
+        <input type="radio" name="recommendation" value="no" id="no" checked> <label for="no">No</label> <br>
+        Choose your favorite websites <br>
+        <select size="5" name="favorites" id="favorite" multiple>
+            
+            <option value="Youtube" selected>Youtube</option>
+            <option value="Google">Google</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Twitter">Twitter</option>
+            <option value="Instagram">Instagram</option>
+            
+        </select>
+        <br>
+        Rate on a scale of 1-10<br>
+        <datalist id="numbers">
+           
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            
+        </datalist>
+        <input type="range" min="0" max="10" step="1" name="rating" list="numbers"><br>
+        <textarea name="comment" id="comment" placeholder="Add additional comments" cols="30" rows="20"></textarea><br>
+        <button type="submit" value="Submit" name="submit">Submit</button><br>
+
+    </form>
+    </div>
+</body>
