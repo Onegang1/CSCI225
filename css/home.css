@@ -1,0 +1,100 @@
+
+.wrapper {
+   
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+}
+  body{
+      background-image: url(/img/background.jpg);
+  }
+.address{
+    grid-column: 1/5;
+    grid-row: 7/8;
+    border: 3px solid #fff;
+}
+.schedule{
+    grid-column: 1/5;
+    grid-row: 9/11;
+    border: 3px solid #fff;
+}
+.introduction{
+    grid-column: 1/5;
+    grid-row: 2/3;
+}
+.portfolio{
+    grid-column: 1/5;
+    grid-row: 4/7;
+    border: 3px solid #fff;
+}
+.assignment{
+    grid-column: 5/7;
+    grid-row: 4/8;
+}
+.copyright{
+    grid-row: 11/12;
+    grid-column: 1/5;
+}
+.navbar{
+    display: none;
+}
+p{
+    font-family: 'Bebas Neue', cursive; 
+    line-height: normal;
+    text-align: left; 
+}
+body{
+    font-family: 'Bebas Neue', cursive;
+}
+li{
+    color: red;
+    font-weight: 200;
+    display: list-item;
+}
+h1{
+    text-transform: uppercase; letter-spacing: 2px;
+    text-shadow: 0.1em 0.1em 0.1em black;
+    border-radius: 10px;
+    transition: ease-in-out 3s;
+
+}
+a{
+    text-decoration: none;
+    font-style:inherit;
+}
+a:hover{
+    font-style: italic;
+}
+
+ul{
+    list-style-image: url("/img/star.png");
+}
+footer{
+    background-color: red;
+}
+li.navbar{
+    border-radius: 15px;
+}
+p::first-letter{
+    color: blue;
+    font-weight: bold;
+
+}
+p.portfolio{
+    box-shadow: -25px -25px 50px black;
+}
+body{
+    border: black 1px;
+}
+table{
+    border: black;
+    padding: 10px;
+    vertical-align: 5px;
+    empty-cells: show;
+}
+
+h1:hover{
+    transform:translate(10px);
+}
