@@ -1,0 +1,16 @@
+.weightblock{
+    width:500px;
+    height:100px;
+    display: block;
+    border:1px;
+    background: linear-gradient(to right,red,blue,green); 
+    text-align: center;
+    line-height: 100px;
+    position:relative;
+    bottom: 0;
+
+}
+.rainbow {
+    background: linear-gradient(to right,red,green,orange,yellow); 
+    width: 300px;
+}

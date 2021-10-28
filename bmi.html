@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href=" css/main.css ">
+    <!-- Jquery library   ---->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>
+            <div class="rainbow">
+            <p>
+                <label> Name:
+                    <input type="text" id="name">
+                </label>
+            </p>
+            <p id="welcome1">
+
+            </p>
+            <p>
+                <label> Weight in pounds:
+                    <input type="text" id="weight">
+                </label>
+            </p>
+            <p>
+                <label> Height in inches:
+                    <input type="text" id="height">
+                </label>
+            </p>
+            <p>Age
+                <select id="age">
+                    <option> 20 Below </option>
+                    <option> 20 - 30</option>
+                    <option> 30 - 50</option>
+                    <option> 50 - 60</option>
+                    <option> 60 above</option>
+                </select>
+            </p>
+            <p id="ageResult">
+
+            </p>
+            <p>
+                <button>
+                    <input type="button" value="Compute BMI" id="pbutton">
+                </button>
+
+
+
+            </p>
+            <p id="result">
+
+            </p>
+            </div>
+                <img src="img/Female_Mii.png"  id = "mii"> 
+        </p>
+        <div class="weightBlock"><p style="position: absolute; left: 0;">Underweight</p><p style="position: absolute; left:25%;">Healthy</p><p style="position: absolute; left: 50%;">Overweight</p><p style="position: absolute; left: 75%;">Obesity</p>
+            <div id="vBar" class="vertical bar" style="width: 25px;height: 125px;background-color: grey;  opacity: .75;top: -10%;"></div>
+                </div>
+            
+            <script>
+                document.getElementById('name').addEventListener('blur', welcome);
+                document.getElementById('pbutton').addEventListener('click', calcBMi);
+                function welcome() {
+                    document.getElementById('welcome1').textContent = "Hey " + document.getElementById('name').value + " Thanks for using our BMI calculator"
+                }
+                function calcBMi() {
+                    
+                            
+                    var weight = document.getElementById('weight').value;
+                    var height = document.getElementById('height').value;
+                    var e1 = document.getElementById('age').selectedIndex;
+                    switch (e1) {
+                        case 0: document.getElementById('ageResult').textContent = "Hey check out this link (https://www.cdc.gov/growthcharts/data/set1clinical/cj41l023.pdf to determine weight category"
+                    }
+                    if (weight > 0 && height > 0) {
+                        var bmi = (weight * 703) / (height * height);
+                        document.getElementById('result').textContent = "Your BMI is " + bmi.toFixed(2);
+                        if (bmi > 25 && bmi < 30) {
+                            window.open("http://www.nhlbi.nih.gov/health/public/heart/obesity/lose_wt/control.htm");
+                            document.getElementById('vBar').animate(
+                        [
+                            {transform:'translate(10px)'}, 
+                            {transform:'translate(270x)'}],
+                            {duration:1000,fill:'forwards'});
+                            document.getElementById('mii').animate([{transform:'scale(0.2,0.5)'}, {transform:'scale(0.8,0.5)'}],{duration:1000,fill:'forwards'});
+                        }
+                        } 
+                    
+                        if(bmi >= 30){
+                            window.open("http://www.nhlbi.nih.gov/health/public/heart/obesity/lose_wt/control.htm");
+                            document.getElementById('vBar').animate(
+                        [
+                            {transform:'translate(10px)'}, 
+                            {transform:'translate(405px)'}],
+                            {duration:1000,fill:'forwards'});
+                            document.getElementById('mii').animate([{transform:'scale(0.2,0.5)'}, {transform:'scale(1.0,0.5)'}],{duration:1000,fill:'forwards'});
+                        }
+                          
+                        if(bmi > 18.5 && bmi < 25){
+                            document.getElementById('vBar').animate(
+                        [
+                            {transform:'translate(10px)'}, 
+                            {transform:'translate(133px)'}],
+                            {duration:1000,fill:'forwards'});
+                            document.getElementById('mii').animate([{transform:'scale(0.2,0.5)'}, {transform:'scale(0.6,0.5)'}],{duration:1000,fill:'forwards'});
+                        }
+                        
+                        if(bmi > 0 && bmi < 18){
+                            document.getElementById('vBar').animate(
+                        [
+                            {transform:'translate(10px)'}, 
+                            {transform:'translate(23px)'}],
+                            {duration:1000,fill:'forwards'});
+                            document.getElementById('mii').animate([{transform:'scale(0.2,0.5)'}, {transform:'scale(0.4,0.5)'}],{duration:1000,fill:'forwards'});
+                        }
+                        
+                    
+                     
+                    }
+                   
+        
+
+            </script>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
